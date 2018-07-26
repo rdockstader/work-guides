@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SATools Home</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+        <header>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4 pl-3">SA Tools</h1>
+                </div>
+            </div>
+        </header>
+        <section class="container pb-4">
+            <div class="accordion" id="acordian-root">
+                <div class="card">
+                    <div class="card-header" id="heading-tools">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-tools" aria-expanded="true" aria-controls="collapse-tools">
+                            Tools
+                        </button>
+                        </h5>
+                    </div>
+                    <div id="collapse-tools" class="collapse" aria-labelledby="heading-tools" data-parent="#acordian-root">
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <a href="./CaseQuickEntry" class="list-group-item list-group-item-action">Case Quick Entry</a>
+                                <a href="./CaseQuickEntryTest" class="list-group-item list-group-item-action">Case Quick Entry Test</a>
+                                <a href="./EvoTimeTracking" class="list-group-item list-group-item-action">Evo Time Tracking</a>
+                                <a href="./EvoTT" class="list-group-item list-group-item-action">Evo TT</a>
+                                <a href="./CoolTool" class="list-group-item list-group-item-action">Cool Tool</a>
+                                <a href="./JustWareMap" class="list-group-item list-group-item-action">JustWare Map Tool</a>
+                                <a href="./SCQE" class="list-group-item list-group-item-action" disabled>Case Quick Entry Tool (old Windows App)</a>
+                                <a href="./SACQE" class="list-group-item list-group-item-action" disabled>SA Case Quick Entry (old Windows App)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading-boards">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-boards" aria-expanded="false" aria-controls="collapse-boards">
+                            Evo Case Boards
+                        </button>
+                        </h5>
+                    </div>
+                    <div id="collapse-boards" class="collapse" aria-labelledby="heading-boards" data-parent="#acordian-root">
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <a href="./sptCaseBoard.aspx" class="list-group-item list-group-item-action">Support Case Board</a>
+                                <a href="./ecSptCaseBoard.aspx" class="list-group-item list-group-item-action">eCourt Support Case Board</a>
+                                <a href="./Queue.aspx" class="list-group-item list-group-item-action">Queue</a>
+                                <a href="./eSptCaseBoard.aspx" class="list-group-item list-group-item-action">EscalatedCase Board</a>
+                                <a href="./saCaseBoard.aspx" class="list-group-item list-group-item-action">SA Case Board</a>
+                                <a href="./esaCaseBoard.aspx" class="list-group-item list-group-item-action">eCourt SA Case Board</a>
+                                <a href="./devCaseBoard.aspx" class="list-group-item list-group-item-action">Dev Case Board</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading-training">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-training" aria-expanded="false" aria-controls="collapse-training">
+                            Training
+                        </button>
+                        </h5>
+                    </div>
+                    <div id="collapse-training" class="collapse" aria-labelledby="headingThree" data-parent="#acordian-root">
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <a href="./training/eCourt" class="list-group-item list-group-item-action">eCourt</a>
+                                <a href="./training/justware" class="list-group-item list-group-item-action">JustWare</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JustWare Training Dashboard</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1>JustWare Support Training Dashboard</h1>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="accordion" id="accordian-justware">
+						<div class="card">
+							<div class="card-header" id="heading-quick-guides">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-quick-guides" aria-expanded="true" aria-controls="collapse-quick-guides">
+										Quick Guides
+									</button>
+								</h5>
+							</div>
+							<div id="collapse-quick-guides" class="collapse show" aria-labelledby="heading-quick-guides" data-parent="#accordian-justware">
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<a href="quickguides/findserviceversioninfo/" class="list-group-item list-group-item-action">
+											Check Service Version Info
+										</a>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="heading-jwerrors">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-jwerrors" aria-expanded="true" aria-controls="collapse-jwerrors">
+										Common JustWare Errors
+									</button>
+								</h5>
+							</div>
+							<div id="collapse-jwerrors" class="collapse" aria-labelledby="heading-jwerrors" data-parent="#accordian-justware">
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<a href="jwerrors/jwebencryptionkey/" class="list-group-item list-group-item-action">
+											Error inserting the JusticeWeb server record: Error opening the encryption key. Make sure you are a member of the correct database role. Please create a master key in the database or open the master key in the session before performing this operation.
+										</a>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	</body>
+</html>
