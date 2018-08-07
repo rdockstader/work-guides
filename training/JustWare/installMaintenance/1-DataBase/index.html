@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JustWare DB Instal</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>JustWare Database Installation/Restoration</h1>
+				<p class="lead">How to install a new database, or restore an existing database in the JTI Customer Services Department</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p>
+						<strong>Note:</strong> SQL Server Management Studio (SSMS) is required to be installed on your machine
+						or an accessible network server for you to follow along with this guide
+					</p>
+					<div>
+						<p>Jump to: <a href="#restore-title">Database Restore Procedure</a></p>
+					</div>
+					<h2>Installing a Fresh Database</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open \\jove\Product_Development\Installations\JustWare in File Explorer</p>
+							<img src="img/jw_instal_loc_on_jove.png" alt="JustWare Install on Jove" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the Version you want to install (if you're not sure, using the latest version is always a good idea)</p>
+							<p>The Latest version at the time this was created is 6.1.3.0, so i'll go into JustWare 6.1 -> 6.1.3.0</p>
+							<img src="img/latest_jw_version.png" alt="JustWare Latest Version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Copy the JustWare Database Server Install.exe to your local computer and run it</p>
+							<img src="img/transfer_jw_server_installer.png" alt="Move the exe" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Use Network Instance, and fill in the server name for your install, then hit next</p>
+							<p>
+								<strong>Note: </strong>In Support, Zeppelin is used for test databases that <strong><em>do not</em></strong> contain customer data
+								while Zombie is used for any database that contains customer database
+							</p>
+							<img src="img/choose_network_instance.png" alt="Chose the network instance" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select Create a new blank Database, and input a name. A name for a test database on Zeppelin should generally
+								consist of your initials and the word "test". I.E: RD_Test. Customer Databases on zombie should consist
+								of your initials, the customer name, and the case number you're using the database for. I.E. RD_Guam_18_1
+							</p>
+							<img src="img/name_database.png" alt="Database Naming" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								On this page, we see the data and log file location of the database. Generally the default location should be fine, unless
+								you get an error. If you get an error here, consult with your trainer or the escalated team.
+							</p>
+							<img src="img/data_log_files.png" alt="Data and Log files" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Next the SQL user will need to be added. the username here must be 'uinta'. The password doesn't matter, since it will
+								prompt us to use the existing login on the database, to which we'll answer yes.
+							</p>
+							<img src="img/db_login_creds.png" alt="DB Login Creds" class="img-fluid mx-auto d-block rounded mb-3">
+							<img src="img/db_login_prompt.png" alt="DB Login Prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Set the jwadmin account password. Set this to whatever you would like. It can be changed in the JustWare Maintance console
+								at a later time if needed.
+							</p>
+							<img src="img/jwadmin_pw.png" alt="jwadmin account" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								In this page the active directory information will need to set. the netBIOS name is the short domain name. I.E. JTI
+								the Fully Qualified Domain Name (FQDM) is the full version of the domain, I.E. JTI.int
+							</p>
+							<img src="img/active_directory.png" alt="AD Config" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Next the Database will begin to install
+							</p>
+							<img src="img/db_install_page.png" alt="db_install_page" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Once that finishes, hit the finish button and you should have a database ready to go!</p>
+							<img src="img/finish_btn.png" alt="Finish Button" class="img-fluid mx-auto d-block rounded mb-3">
+							<img src="img/db_in_ssms.png" alt="Database in SSMS" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="restore-title">Restoring a JustWare Database</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Move the file from it's currently location (likely on the FTP) to \\zombie\Sql14Bkp</p>
+							<img src="img/move_bak_file.png" alt="move bak file" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Rename to the datbase file to Initials_AgencyName_Case_ID. IE. HI_Sebastian_18_6465.bak</p>
+							<img src="img/db_naming.png" alt="Database Naming" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Launch SSMS and connect to Zombie (for databases with customer data)</p>
+							<img src="img/connect_to_zombie.png" alt="Connecting to Zombie" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Run the restore database stored procedure, filling out the .bak file name and the database name
+								(the database name should be the same as the .bak file, without the .bak on the end)
+							</p>
+							<a href="download/RestoreScript.sql" class="btn btn-primary mb-3" download>Download the Script</a>
+							<img src="img/restore_script.png" alt="Restore Script" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Once the script finishes, your database should be ready to use with a JustWare install.</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>

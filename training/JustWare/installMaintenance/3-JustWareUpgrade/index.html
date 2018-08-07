@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JustWare Upgrade Guide</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>JustWare Upgrade Guide</h1>
+				<p class="lead">How to Upgrade an instance of a JustWare install</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<ol>
+						<li class="pb-5">
+							<p>
+								First Verify the Maintance Console is on the version you need to upgrade to. If not, click 
+								<a href="../2-JustWareInstall/index.html#ud-mc">Here</a> 
+								for instructions on how to upgrade/downgrade the JustWare Maintance Console  (JWMC)
+							</p>
+							<img src="img/jwmc_version_info.png" alt="JWMC Version Info" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								One the JustWare Maintance Console is on the correct version, Navigate to \\jove\Product_Development\Installations\JustWare\ and find the JustWare version that matches your database
+							</p>
+							<img src="img/network_path.png" alt="JWMC Version Info" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the Updates folder, and choose any of the .zip files there</p>
+							<img src="img/updates_folder.png" alt="updates folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Copy the file to your desktop</p>
+							<img src="img/move_install_file_to_desktop.png" alt="move to desktop" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Click the version dropdown, and select the version you want to upgrade</p>
+							<img src="img/select_version.png" alt="Select Version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the JWMC and select the ... in the bottom right corner, in the upgrade file section</p>
+							<img src="img/browse_button.png" alt="browse button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the .zip you moved from Jove</p>
+							<img src="img/select_zip.png" alt="Select zip" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>click upgrade to newest version</p>
+							<img src="img/upgrade_to_newest_version.png" alt="Upgrade to newest Version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>select yes on the prompt</p>
+							<img src="img/prompt_yes.png" alt="Prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>After the JWMC becomes responsive again, your environment should report the new version</p>
+							<img src="img/new_version.png" alt="new version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	</body>
+</html>

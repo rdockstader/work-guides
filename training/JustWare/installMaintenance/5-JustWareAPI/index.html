@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>API Maintanace</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="/training/shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>API Maintance</h1>
+				<p class="lead">How to Install, Test and Remove, the JustWare API</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p><strong>Jump To:</strong></p>
+					<div class="list-group">
+						<a class="list-group-item" href="#api-setup">Pre Install Setup</a>
+						<a class="list-group-item" href="#api-intall">Installing the API</a>
+						<a class="list-group-item" href="#api-test">Testing the API</a>
+						<a class="list-group-item" href="#api-rmv">Removing the API</a>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="com-12">
+					<h2 id="api-setup">Pre Install Setup</h2>
+					<h3>Adding the API Temp File Directory</h3>
+					<ol>
+						<li class="pb-5">
+							<p>
+								On the Web server, open the install location of your environment. This should be 
+								S:\JustWareInstalls\YOUR_INTIIALS\AGENCY_NAME. I.E. s:\JustWareInstall\RD\Latest
+							</p>
+							<img src="img/setup_1_path.png" alt="APITemp Path" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Add a folder called APITemp
+							</p>
+							<img src="img/setup_2_APITemp_folder.png" alt="APITemp Folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+					<h3>Setting up API Permissions in JustWare</h3>
+					<ol>
+						<li class="pb-5">
+							<p>
+								Open the instance of JustWare you're adding the API to, and open the Account Management Menu.
+							</p>
+							<img src="img/setup_3_admin_page.png" alt="Open JustWare Admin Page" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Opoen User Accounts, and create a new row for the API user. Select non-client user, as it will only be a service user.
+							</p>
+							<img src="img/setup_4_api_user_create.png" alt="Create API User" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open Security Profiles, and create a new API Security Profile if there isn't already one. This profile will need all
+								the Case, Name, and Administration API Permissions
+							</p>
+							<img src="img/setup_5_api_permissions.png" alt="Api Permissions" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Add the jti\cs_api user to the API Security profile
+							</p>
+							<img src="img/setup_6_add_user_to_sg.png" alt="Add user to Profile" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+					<h3>Setup Database Permissions</h3>
+					<ol>
+						<li class="pb-5">
+							<p>Open SQL Server Management Studio (SSMS)</p>
+							<img src="img/setup_7_launch_ssms.png" alt="Launch SSMS" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Connect to the SQL Server where your JustWare Database exists</p>
+							<img src="img/setup_8_Connect_to_SQL.png" alt="Connect to SQL" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Expand Security -&gt; Logins</p>
+							<img src="img/setup_9_logins.png" alt="Expand setup logins" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Right click on the jti\cs_api user and select properties</p>
+							<img src="img/setup_10_login_props.png" alt="login properties" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Go to the user Mapping section</p>
+							<img src="img/setup_11_user_mapping.png" alt="user mapping" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Check the box next to your database</p>
+							<img src="img/setup_12_check_box.png" alt="map to db" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>add the user to all JustWare groups, as well as db_owner (for testing only)</p>
+							<img src="img/setup_13_db_role.png" alt="add db roles" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="api-intall">Installing the API</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open the JustWare Maintenance Console (JWMC) on the Web Server</p>
+							<img src="img/install_1_Open_jwmc.png" alt="Open JWMC" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the version you would like to install the API against</p>
+							<img src="img/install_2_version.png" alt="JWMC Version Select" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Note the version of the Instance</p>
+							<img src="img/install_3_version.png" alt="Instance Version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open File explorer and navigate to \\jove\Product_Development\Installations\JustWare </p>
+							<img src="img/install_4_network_path.png" alt="Network Path" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the major version folder, find your version and open that</p>
+							<img src="img/install_5_version_folder.png" alt="Version Folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the API folder and copy the NdtApiInstaller to your desktop</p>
+							<img src="img/install_6_move_installer.png" alt="Move Installer" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Run the Installer</p>
+							<img src="img/install_7_page_1.png" alt="Installer page 1" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select New Installation, and hit next </p>
+							<img src="img/install_8_page_2.png" alt="Installer page 2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Hit Next</p>
+							<img src="img/install_9_page_3.png" alt="Installer page 3" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Enter in the Virtual Directory. This should be Install name + API (I.E. RDLatestAPI, or RDGuam181000API</p>
+							<img src="img/install_10_page_4.png" alt="Installer page 4" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Enter the APITemp folder path that was created in the 
+								<a href="#api-setup">setup section</a> 
+								into the Temp file Directory
+							</p>
+							<img src="img/install_11_page_5.png" alt="Installer page 5" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Enter in the username and password for the JTI\CS account. If you have forgotten the password, ask 
+								your trainer or team members. Then click verify user, and then next.
+							</p>
+							<img src="img/install_12_page_6.png" alt="Installer page 6" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Hit Next</p>
+							<img src="img/install_13_page_7.png" alt="Installer page 7" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Fill in the Server and Database associated with your install. This should match the SQL Server Instance
+								and JustWare Database Name found on the WebService tab of the JWMC. Once it's filled out, hit test 
+								connection, and then finish.
+							</p>
+							<img src="img/install_14_apistatus_page.png" alt="Installer page 8" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								If the install completes succesfully, you should be navigated to the API/Status.aspx page
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="api-test">Testing the API</h2>
+					<ol>
+						<li class="pb-5">
+							<p>
+								Open the ApiStatus.aspx page. This will be the base URL for the API, with /web/ApiStatus.aspx on the end of it.
+								(I.E. https://acuna/RDLatestAPI/Web/ApiStatus.aspx)
+							</p>
+							<img src="img/testing_1_api_status_page.png" alt="API Status URL" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Enter in the jti\cs_api credentials (or whatever user that you setup in the API Security profile in the 
+								<a href="#api-setup">setup</a>
+								section)
+							</p>
+							<img src="img/testing_2_un_pw.png" alt="API username and password" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>When you check the user, everything should return as true.</p>
+							<img src="img/testing_3_results.png" alt="API Results" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If everything is true, your API should be ready to be used/tested.</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="api-rmv">Removing the API</h2>
+					<ol>
+						<li class="pb-5">
+							<p>
+								Launch the API Installer (you can find this by following the first instructions in the 
+								<a href="#api-intall">Installing the API</a>
+								section
+							</p>
+							<img src="img/remove_1_api_installer.png" alt="api installer" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select the Uninstall Option, and use the dropdown to select the version to remove
+							</p>
+							<img src="img/remove_2_uninstall.png" alt="Uninstall option" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select Finish
+							</p>
+							<img src="img/remove_3_finish.png" alt="finish button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select Yes on the prompt
+							</p>
+							<img src="img/remove_4_prompt_yes.png" alt="yes on prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								It should then remove the API Install.
+							</p>
+							<img src="img/remove_5_succes.png" alt="success message" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>

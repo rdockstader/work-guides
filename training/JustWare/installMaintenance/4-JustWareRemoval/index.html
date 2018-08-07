@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JustWare Removal</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Removing a JustWare Installation</h1>
+				<p class="lead">How to Remove a JustWare install, the files associated with it, and the database</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p>
+						<strong>Note</strong>: Any services (Mobile, the API, JusticeWeb, etc.) that are installed against
+						an install that you would like to remove should be removed prior to removing JustWare.
+					</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<p><strong>Jump To:</strong></p>
+					<div class="list-group">
+						<a class="list-group-item" href="#rmv-web-service">Remove Web Service</a>
+						<a class="list-group-item" href="#rmv-files">Remove Associated Files</a>
+						<a class="list-group-item" href="#rmv-db">Remove Database</a>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="rmv-web-service">Remove Web Service</h2>
+					<ol>
+						<li class="pb-5">
+							<p>On the web server, launch the JustWare Maintance Console (JWMC)</p>
+							<img src="img/launch_JWMC.png" alt="Launch JWMC" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the Web Server Install Tab</p>
+							<img src="img/wsi_tab.png" alt="Web Server Install" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>In the Uninstall section, use the drop down to select the version you'd like to remove</p>
+							<img src="img/version_to_uninstall.png" alt="version to uninstall" class="img-fluid mx-auto d-block rounded">
+						</li><li class="pb-5">
+							<p>Click the Uninstall button</p>
+							<img src="img/uninstall_btn.png" alt="uninstall button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select yes to delete all reports (if you need to keep any reports leave this prompt open and 
+								download those reports to your machine)
+							</p>
+							<img src="img/prompt_yes.png" alt="Prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Hit OK</p>
+							<img src="img/prompt_OK.png" alt="Prompt 2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Wait for the uninstall to complete</p>
+							<img src="img/uninstall_complete.png" alt="uininstall complete" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="rmv-files">Remove Associated Files</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open File Explorer</p>
+							<img src="img/file_expl.png" alt="File Explorer" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Navigate to the install folder (should contain docTemp, workflowTemp, and filingCabinet) and delete the entire folder</p>
+							<img src="img/delete_folder.png" alt="delete folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="rmv-db">Remove Database</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Launch SQL Server Management Studio (SSMS)</p>
+							<img src="img/launch_ssms.png" alt="Launch SSMS" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Connect to the SQL Server (Zombie or Zeppelin)</p>
+							<img src="img/connect_to_sql.png" alt="Connect to SQL" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Right click on your database, and select delete</p>
+							<img src="img/delete_db.png" alt="Delete Database" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Check the box to close existing connections</p>
+							<img src="img/close_connect.png" alt="Close Connections" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Hit Okay</p>
+							<img src="img/delete_db_ok.png" alt="Okay Btn" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Once the Database is deleted, your JustWare install should be completely removed</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	</body>
+</html>

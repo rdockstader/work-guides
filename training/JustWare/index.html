@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<title>JustWare Training Dashboard</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-		<link rel="stylesheet" href="file:///C|/Users/rdockstader/Documents/WebDev/shared/css/style.css">
+		<link rel=stylesheet href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="/training/shared/css/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -68,12 +69,47 @@
 								</div>
 							</div>
 						</div>
+						<div class="card">
+							<div class="card-header" id="heading-jwintalls">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-jwintalls" aria-expanded="true" aria-controls="collapse-jwintalls">
+										JustWare Install and Maintance
+									</button>
+								</h5>
+							</div>
+							<div id="collapse-jwintalls" class="collapse" aria-labelledby="heading-jwintalls" data-parent="#accordian-justware">
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<a href="installMaintenance/1-DataBase/" class="list-group-item list-group-item-action">
+											Database Install/Restore
+										</a>
+										<a href="installMaintenance/2-JustWareInstall/" class="list-group-item list-group-item-action">
+											JustWare Install
+										</a>
+										<a href="installMaintenance/3-JustWareUpgrade/" class="list-group-item list-group-item-action">
+											JustWare Upgrade
+										</a>
+										<a href="installMaintenance/4-JustWareRemoval/" class="list-group-item list-group-item-action">
+											JustWare Removal
+										</a>
+										<a href="installMaintenance/5-JustWareAPI/" class="list-group-item list-group-item-action">
+											API Maintance
+										</a>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
 	</body>
 </html>

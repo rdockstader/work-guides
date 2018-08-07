@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JustWare Installation</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>JustWare Installation Guide</h1>
+				<p class="lead">How to install JustWare against a Database</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p><strong>Jump To:</strong></p>
+					<div class="list-group">
+						<a class="list-group-item" href="#check-version">Check Database Version</a>
+						<a class="list-group-item" href="#ud-mc">Upgrade/Downgrade the Maintance Console</a>
+						<a class="list-group-item" href="#create-folders">Create Install Folders</a>
+						<a class="list-group-item" href="#install-justware">Install JustWare</a>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="check-version">Check Database Version</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open SQL Server Management Studio (SSMS), and connect to the SQL Server</p>
+							<img src="img/connect_to_sql.png" alt="connect to sql" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>right click on your database, and select new query</p>
+							<img src="img/new_query_btn.png" alt="new query button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Run the Check Version SQL Query</p>
+							<a href="downloads/CheckVersion.sql" class="btn btn-primary" download>Download the Query</a>
+							<img src="img/chk_version.png" alt="check version" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>The result of this query is your JustWare Version</p>
+							<img src="img/release_version.png" alt=" release version" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+					
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="ud-mc">Upgrade/Downgrade the Maintance Console</h2>
+					<p>This is only necessary if the Maintance Console is not already on the same version as your database.</p>
+					<ol>
+						<li class="pb-5">
+							<p>Connect to Acuna in Remote Desktop Connection</p>
+							<img src="img/rdp_to_acuna.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Launch the JustWare Maintance Console, and check the version</p>
+							<img src="img/mc_version.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If this version doesn't match your database version, close the console.</p>
+							<img src="img/close_console.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open task manager -> users, and check if any other users (active or disconnected) are using the console</p>
+							<img src="img/task_manager.png" alt="" class="img-fluid mx-auto d-block rounded mb-3">
+							<img src="img/users_tab.png" alt="" class="img-fluid mx-auto d-block rounded">
+							
+						</li>
+						<li class="pb-5">
+							<p>
+								If an active user has it open, message them asking if they can close it so you can upgrade it. If it is a disconnected user
+								kill the task
+							</p>
+							<img src="img/running_mc.png" alt="" class="img-fluid mx-auto d-block rounded  mb-3">
+							<img src="img/mc_end_task.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								open File explorer, and go to \\jove\Product_Development\Installations\JustWare\ and select the version that matches your
+								database
+							</p>
+							<img src="img/network_path.png" alt="network path" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the MaintenanceConsoleInstaller folder, and copy the JWMCInstaller.exe to your desktop
+							</p>
+							<img src="img/copy_JWMCInst_to_desktop.png" alt="copy to desktop" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Run the JWMCInstaller.exe
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								If it's an upgrade (increase in version number) there will be an upgrade button. If that is there, select it. Otherwise run it in Repair
+							</p>
+							<img src="img/MCI_repair_mode.png" alt="repair mode" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select Repair/Upgrade on the next screen
+							</p>
+							<img src="img/repair_btn.png" alt="repair button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								If you see this message the sync service needs to be killed.
+							</p>
+							<img src="img/prompt_error_msg.png" alt="Error Message" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								To do this, launch task manager, go to the services tab, find JustWare Syncronization Service, right click and select Go To Details.. 
+							</p>
+							<img src="img/task_manager.png" alt="launch task manager" class="img-fluid mx-auto d-block rounded  mb-3">
+							<img src="img/go_to_details.png" alt="Services Tab" class="img-fluid mx-auto d-block rounded  mb-3">
+							<img src="img/go_to_details.png" alt="go to details" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Right click the details row and end task
+							</p>
+							<img src="img/jwsync_end_task.png" alt="end task" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Select OK on the prompt
+							</p>
+							<img src="img/prompt_ok_btn.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								After the installer completes hit OK, open the console back up, and you'll be ready to Install JustWare
+							</p>
+							<img src="img/jwmcinst_ok_btn.png" alt="Success" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="create-folders">Create Install Folders</h2>
+					<ol>
+						<li class="pb-5">
+							<p>On the Web server, open file explorer</p>
+							<img src="img/ws_file_explorer.png" alt="open file explorer" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the S Drive</p>
+							<img src="img/acuna_s_drive.png" alt="acuna S drive" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open JustWare Installs</p>
+							<img src="img/jwi_folder.png" alt="JustWare Installs" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If there is a folder with your initials in there, open that folder. Otherwise Create one with your initials on open it</p>
+							<img src="img/create_initials_folder.png" alt="initials folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Create a new folder with the Agency name (the middle part of the database name), and open that folder</p>
+							<img src="img/create_agency_folder.png" alt="agency folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Create Three folders inside the agency folder</p>
+							<ul>
+								<li>docTemp</li>
+								<li>workflowTemp</li>
+								<li>filingCabinet</li>
+							</ul>
+							<img src="img/three_folders.png" alt="Three Folders" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="install-justware">Install JustWare</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Navigate to \\jove\Product_Development\Installations\JustWare\ and find the JustWare version that matches your database</p>
+							<img src="img/network_path.png" alt="network path" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the Updates folder, and choose any of the .zip files there</p>
+							<img src="img/updates_folder.png" alt="updates folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Copy the file to your desktop</p>
+							<img src="img/move_install_file_to_desktop.png" alt="move to desktop" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open the JustWare Maintenance Console, and go to the Web Server Install tab</p>
+							<img src="img/web_server_install_page.png" alt="web server install" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Browse next to the Install File text box, and brose to your desktop where you placed the .zip file</p>
+							<img src="img/install_file_textbox.png" alt="install file textbox" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>name the installation the same as your database, but without underscores. I.E. RDTest, or RDGuam18150</p>
+							<img src="img/name_of_installation.png" alt="name of installation" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Click the Install button (the next prompt may take a while to load)</p>
+							<img src="img/wsi_install_btn.png" alt="install button" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>On the first page, select Next</p>
+							<img src="img/jw_install_pg_1.png" alt="page 1" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Open \\jove\support\License 9999 (internal use only).txt, and paste in that licence key</p>
+							<img src="img/jw_install_pg_2a.png" alt="page 2a" class="img-fluid mx-auto d-block rounded  mb-3">
+							<img src="img/jw_install_pg_2b.png" alt="page 2b" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Varify the host name matches the server your on, and hit next</p>
+							<img src="img/jw_install_pg_3.png" alt="page 3" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_4.png" alt="page 4" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Fill in the SQL Server Instance (the SQL Server Name I.E. Zombie or Zeppelin) and the JustWare Database
+								Name (the name of the database. I.E RD_Test or RD_Guam_18-100). Then hit next
+							</p>
+							<img src="img/jw_install_pg_5.png" alt="Page 5" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Change the External address to the SQL Server for both URLS. This should also update the internal address</p>
+							<p>Before: </p>
+							<img src="img/jw_install_pg_6a.png" alt="page 6a" class="img-fluid mx-auto d-block rounded">
+							<p>After: </p>
+							<img src="img/jw_install_pg_6b.png" alt="page 6b" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_7.png" alt="page 7" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_7_2.png" alt="page 7.2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>User the uinta user to connect to the database</p>
+							<p><strong>UserName: </strong> uinta</p>
+							<p><strong>Password: </strong> request the password from your trainer or team.</p>
+							<img src="img/jw_install_pg_8.png" alt="Page 8" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Set the Document and workflow temp directories to the directories created in the 
+								<a href="#create-folders">Create Installs</a>
+								section.
+							</p>
+							<img src="img/jw_install_pg_9a.png" alt="Page 9a" class="img-fluid mx-auto d-block rounded  mb-3">
+							<p>
+								and use the jti\cs username for the windows credentials. For the password, ask your trainer/team.
+							</p>
+							<img src="img/jw_install_pg_9b.png" alt="Page 9b" class="img-fluid mx-auto d-block rounded">
+							
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_10.png" alt="page 10" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Set the Smart Client Name to match your install name (I.E. RDTest or RDGuam181000</p>
+							<img src="img/jw_install_pg_11.png" alt="page 11" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_12.png" alt="page 12" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next</p>
+							<img src="img/jw_install_pg_13.png" alt="page 13" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next To start the install</p>
+							<img src="img/jw_install_pg_14.png" alt="page 14" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>After the install completes, your new JustWare Install should be ready to use.</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>
