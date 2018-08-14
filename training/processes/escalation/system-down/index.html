@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>System Down Process</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>System Down Process</h1>
+				<p class="lead">What to do if you get a call and suspect a system down/critical issue</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<ol>
+						<li class="pb-4">
+							<p>
+								Fill out this Google Form to help determine if it's a system down. (if you're pretty sure it's down, I.E. users can't login, 
+								skip to the next step and inform the escalated tech the form has not been filled out)
+							</p>
+							<a href="https://docs.google.com/forms/d/e/1FAIpQLSdV16SMFFvOO-g7qTuAUASON8uKeTi6UVt7jVuWbm7FB9YD5w/viewform?usp=sf_link"
+							   class="btn btn-primary" target="_blank">Open Form</a>
+							<p class="pt-3 mt-3" >
+								<strong>
+									Responses to this form can be viewed 
+									<a target="_blank" href="https://docs.google.com/spreadsheets/d/1Rg_BiZ0s4_yQO-BDTtpVQI1h75Jqk4FeJAmdIiYHgjE/edit?usp=sharing">here</a>.
+								</strong>
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								If it is determined to be a system down or critical issue, alert an escalated support tech or solutions architect
+								and confirm that it is a critical issue/system down with them. If it is confirmed, begin the process of transfering
+								the call and/or screenshare to them. Also post in Tech Support, and specify the agency that is down and the 
+								escalated rep that it is being transfered to.
+							</p>
+							<p>
+								<strong>Note:</strong> At this point the person that answered the phone call should create a case, set themselves
+								as the lead support tech and send the CaseID to the escalated working the case. The support rep should then disengage with the issue until notified by the escalated
+								support rep.
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								The Escalated support rep should then turn on the alert lights. The red light is for JustWare, and the blue light is for 
+								eCourt.
+							</p>
+							<img src="img/support-lights.JPG" alt="support lights" style="width: 50%" class="img-fluid mx-auto d-block rounded mt-3">
+						</li>
+						<li class="pb-5">
+							<p>
+								The Escalated tech should then create a google document and start making a timeline, with what has been
+								tried/learned and when (this will evolve into the Post mortem document after the call is finished)
+								. This document should then be posted in #LoganDevSupport with an @channel. 
+								This will insure that development will know the status of the issue. The post should also outline the problem they are experiencing, the current status of the issue and what resources are needed from development
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								As the call progresses any major additional information/notes should be added to the document timeline. This will
+								help keep everyone informed as the issue progresses. Also if there is any new places that help is needed or major
+								revalations (such as a more definitive error message), another post in #logandevsupport (without an @channel) is 
+								never a bad idea.
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								After the solution is put into place, the Escalated rep should then turn the google document into the official
+								post mortem document (copy template from <a href="https://docs.google.com/document/d/1rTwSddf7-4cLWJBuYCYSRZ7ndzT-utTJCZ5LsiijOvM/edit?usp=sharing" target="_blank">here</a>). If the case is solvable at this point, it should be solved out by the escalated rep. If there is any follow up that needs to happen, then the original support tech will be put in charge of following up with the customer.
+							</p>
+						</li>
+						<li class="pb-5">
+							<p>
+								Once the post mortem is finished, an email should be sent out with the Google Doc share link. Include:
+							</p>
+							<ul class="pb-3">
+								<li>All Escalated reps</li>
+								<li>Curtis Curtis</li>
+								<li>Joel Gillespie</li>
+								<li>Ben Stocks</li>
+								<li>Jon Peek</li>
+							</ul>
+							<p>
+								The link should also be added to this <a href="https://docs.google.com/spreadsheets/d/1vqU61nHlQfPMAKK5HRuKNkuEfbsN8e0l6cPlm-UIiHk/edit?usp=sharing" target="_blank">Post mortem Index</a> google sheet.
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>
