@@ -6,3 +6,7 @@ img {
 a.btn {
 	color: white;
 }
+
+.name-list li {
+	list-style: none;
+}
