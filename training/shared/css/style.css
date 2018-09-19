@@ -10,3 +10,9 @@ a.btn {
 .name-list li {
 	list-style: none;
 }
+
+
+.important {
+	color: red;
+	font-size: 120%;
+}

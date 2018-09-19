@@ -1,0 +1,64 @@
+{	"teams": [
+		{"name":"Jeremy", "members":[
+			{"role": "Account Manager", "name":"Jeremy Gledhill"},
+			{"role": "Config Specialist", "name":"??"},
+			{"role": "Support Rep", "name": "Wolf Brevik"},
+			{"role": "Support Rep", "name": "Don"}
+		]},
+		{"name":"Tanner", "members":[
+			{"role": "Account Manager", "name":"Tanner Davis"},
+			{"role": "Config Specialist", "name":"Carson Cook"},
+			{"role": "Support Rep", "name": "Trevor"},
+			{"role": "Support Rep", "name": "Jason R"}
+		]},
+		{"name":"Kade", "members":[
+			{"role": "Account Manager", "name":"Kade Hendricks"},
+			{"role": "Config Specialist", "name":"Preston"},
+			{"role": "Support Rep", "name": "Holly"}
+		]},
+		{"name":"Tony", "members":[
+			{"role": "Account Manager", "name":"Tony"},
+			{"role": "Config Specialist", "name":"Austin"},
+			{"role": "Support Rep", "name": "Shaun"},
+			{"role": "Support Rep", "name": "Tyson"}
+		]},
+		{"name":"Benji", "members":[
+			{"role": "Account Manager", "name":"Benji Skinner"},
+			{"role": "Config Specialist", "name":"Jordon"},
+			{"role": "Support Rep", "name": "Daniel"},
+			{"role": "Support Rep", "name": "Josh"}
+		]},
+		{"name":"J.R.", "members":[
+			{"role": "Account Manager", "name":"J.R. Ox"},
+			{"role": "Config Specialist", "name":"???"},
+			{"role": "Support Rep", "name": "Daniel"},
+			{"role": "Support Rep", "name": "Josh"}
+		]},
+		{"name":"Shawn", "members":[
+			{"role": "Account Manager", "name":"Shawn"},
+			{"role": "Config Specialist", "name":"???"},
+			{"role": "Support Rep", "name": "John"},
+			{"role": "Support Rep", "name": "Jackson"},
+			{"role": "Support Rep", "name": "Kyler"}
+		]},
+		{"name":"Escalated Support", "members":[
+			{"role": "Escalated Rep", "name":"Jason Ladner"},
+			{"role": "Escalated Rep", "name":"Dennis Holiday"},
+			{"role": "Escalated Rep", "name":"Devin Dockstader"}
+		]},
+		{"name":"Solutions Architects", "members":[
+			{"role": "SA", "name":"Benson Price"},
+			{"role": "SA", "name":"Ryan Dockstader"}
+		]},
+		{"name":"eFiling", "members":[
+			{"role": "Lead", "name": "J.R. Ox"},
+			{"role": "eFiling Rep", "name": "Paul Anderson"},
+			{"role": "eFiling Rep", "name": "Steven Svedin"},
+			{"role": "eFiling Rep", "name": "Britton Griggs"}
+		]}
+	]
+}
+		
+		
+		
+		

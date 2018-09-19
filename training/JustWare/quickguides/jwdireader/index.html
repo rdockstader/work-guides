@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JWDI Reader</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Finding JWDI Files, and Using the JWDI Reader</h1>
+				<p class="lead">Where to find JWDI foles and how to use the JWDI Reader</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p>
+						JWDI Files are the files that JustWare uses while submitting documents from the client machine to the server.
+						When there is an error with a file upload, those errors get written to the JWDI file for that upload.
+					</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<div>
+						<p><strong>Jump To:</strong></p>
+						<div class="list-group">
+							<a class="list-group-item" href="#find-files">Finding JWDI Files</a>
+							<a class="list-group-item" href="#reader">Using the JWDI Reader</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="find-files">Finding the JWDI Files</h2>
+					<ol>
+						<li class="pb-5">
+							<p>First, open the upload manager to check if there are any failed documents</p>
+							<img src="img/1_1_upload_manager.png" alt="Upload Manager" class="img-fluid mx-auto d-block rounded">
+							<img src="img/1_2_failed_tab.png" alt="Failed tab" class="img-fluid mx-auto d-block rounded mt-2">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open File explorer and type %LOCALAPPDATA% into the filepath at the top
+							</p>
+							<img src="img/2_localappdata.png" alt="Local app data" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the NewDawnTech folder
+							</p>
+							<img src="img/3_newdawntech.png" alt="newdawntech" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the JustWare5 folder
+							</p>
+							<img src="img/4_justware5.png" alt="JustWare5" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the Folder Coresponding to the instance your troubleshooting
+							</p>
+							<img src="img/5_instance.png" alt="instance folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the DocumentsTemp folder
+							</p>
+							<img src="img/6_documentstemp.png" alt="docs temps" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the uploads folder 
+							</p>
+							<img src="img/7_uploads.png" alt="Uploads" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								In the upload folder, you should see a jwdi file and the upload that failed
+							</p>
+							<img src="img/8_jwdifile.png" alt="JWDI File" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="reader">Using the JWDI Reader</h2>
+					<ol>
+						<li class="pb-5">
+							<p>With the files located. Download the JWDI Reader from \\satools\Apps\JustWare Specific\JwdiReader.exe </p>
+							<img src="img/9_download_jwdireader.png" alt="" class="img-fluid mx-auto d-block rounded">
+							
+						</li>
+						<li class="pb-5">
+							<p> Run the JWDI Reader, and select Open file </p>
+							<img src="img/10_openfile.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p> paste in the path to the uploads folder </p>
+							<img src="img/11_paste_in_path.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p> Select the JWDI file, and click Open </p>
+							<img src="img/12_selectFile.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p> This should load the information for the error message/file into the JWDI reader </p>
+							<img src="img/13_jwdi_reader_loaded.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>

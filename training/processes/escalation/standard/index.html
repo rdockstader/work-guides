@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Standard Support Case Process</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Standard Escalation Process</h1>
+				<p class="lead">The standard process for escalating a case (any product)</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<div>
+						<p><strong>Jump To:</strong></p>
+						<div class="list-group">
+							<a class="list-group-item" href="#frontline-support">Frontline Support</a>
+							<a class="list-group-item" href="#escalated-support">Escalated Support</a>
+							<a class="list-group-item" href="#solutions-architects">Solutions Architects</a>
+							<a class="list-group-item" href="#developer-support">Developer Support</a>
+							<a class="list-group-item" href="#case-types">Other Case Types</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="frontline-support">Frontline Support</h2>
+					<p>
+						Frontline support is the main group that will be in communication with our supported customers. Most
+						interaction with support and our clients will go through this group.
+					</p>
+					<p>
+						<strong>Configuration Escalation</strong>
+					</p>
+					<p>
+						For any configuration requests (reports, new documents, eCourt configuration changes) that last longer 
+						then <strong>15 minutes</strong> should be sent to account management. Our AM team has people that are more skilled
+						specifically in these requests, and can provide the best experience possible for any newly added
+						module/document/report/etc for our customers.
+					</p>
+					<p>
+						<strong>Support Escalation</strong>
+					</p>
+					<p>
+						For System down/critical cases, please refer to <a href="../system-down/">this process</a>.
+					</p>
+					<p>
+						For any case that can not be solved by the frontline support group, it should be sent to our escalated team. If you're
+						unable to make progress on a case, and you've worked on it for 2 hours or longer it should be escalated. If you know
+						that you've hit a roadblock before then it is also a good idea to consider escalating the case.
+					</p>
+					<p>
+						Items Needed for escalating a support case:
+						<ul>
+							<li>
+								<strong>Steps to Reproduce the issue</strong> These should be the steps to get the error or into the situation
+								that you need assistance with. They should also list an environment <em>that can be accessed locally</em> to reproduce
+								the issue (such as the support test environments).
+							</li>
+							<li>
+								<strong>Customer Impact Statement</strong> This should specify which process this is affecting and how it is
+								effecting that process
+							</li>
+							<li>
+								<strong>Expected Results</strong> This should include the functionality that the customer is saying should be
+								the result of the steps to reproduce the issue
+							</li>
+							<li>
+								<strong>Actual Results</strong> This should include the error message, or the functionality that the customer
+								is saying should not happen as a result of the steps to reproduce the issue
+							</li>
+						</ul>
+					</p>
+					<p>
+						<strong>Note:</strong> Walk up support is also available if on a high priority phone call or you think the question will
+						be fairly quick (5 minute answer or less)
+					</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="escalated-support">Escalated Support</h2>
+					<p>
+						Escalated support is the first level of escalation in all instances. This level of support will come after the front line
+						support level and should rarely communicate directly with a customer (outside of a system down/critical situation) without
+						the frontline support tech there as well. Escalated support has access to all hosted environments as well as the product
+						source code. 
+					</p>
+					<p>
+						If the issue is unable to be solved by the escalated team or it appears that there is a bug in the product the escalated team
+						will then escalate the case to the Solutions Architects.
+					</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="solutions-architects">Solutions Architects</h2>
+					<p>
+						Solutions Architects are the third level of escalation, and the primary group that should be communicating with the 
+						development teams. They also have access to all hosted environments as well as the product source code. 
+					</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2 id="developer-support">Developer Support</h2>
+					<p>
+						This level of support is part of the Development department at JTI. Once a case reaches this level, it is either for
+						a bug fix or an issue that cannot be resolved without someone with a deeper code knowledge then is available in support.
+						All developer support/bug cases should be entered in by a Solutions Architect or escalated support. Frontline support
+						should not need to speak directly with a member of the development department without a Solutions Architect involved.
+					</p>
+				</div>
+			</div>
+			<hr>
+			<div class="row mb-3">
+				<div class="col-12" id="case-types">
+					<h3>Installation/Upgrade Cases</h3>
+					<p>
+						If a support case needs the customer to upgrade or install a new instance, a case should be added as a 
+						Installations/Upgrade case. This can be done through EvoWeb, or by marking an Evolution Case as W.O.C. Upgrade.
+						Our Instalations Architect is best equiped to handle any upgrade/installation that is needed for our customers. 
+						He has flexibility in his schedule with allows him to find a time that works for him and the customer. 
+						He will schedule the install/upgrade with the customer after the case has been created.
+					</p>
+					<h3>Enhancement Cases</h3>
+					<p>
+						Enhancement cases need to be reviewed by a Solutions Architect prior to being entered. The Solutions Architect may have
+						an alternate way that it can already be acomplished, or know of a case that already exists. After it is reviewed by one
+						of them, a support rep may enter the enhancement case. If there are any questions on how to enter an enhancement case
+						ask a member of the escalated team.
+					</p>
+				</div>
+			</div>
+		</section>
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>
