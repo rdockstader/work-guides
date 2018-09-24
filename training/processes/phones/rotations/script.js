@@ -12,7 +12,7 @@ document.onreadystatechange = function(){
                 scheduleHTML += '<div class="col-2 pb-3">';
                 scheduleHTML += '<p><strong>';
                 scheduleHTML += day.name;
-                scheduleHTML += '</strong></p><ul class="list-unstyled">'
+                scheduleHTML += '</strong></p><ul class="list-unstyled">';
                 for (var rep in day.reps) {
                     scheduleHTML += '<li>' + day.reps[rep] + '</li>';
                 }
@@ -22,14 +22,16 @@ document.onreadystatechange = function(){
             // Set Schedule table to support-schedule
             document.getElementById('support-schedule').innerHTML = scheduleHTML;
             // Set next rotation date
-            document.getElementById('next-rotation-date').innerHTMl = responseJSON.schedule.nextRotation;
+            document.getElementById('next-rotation-date').innerHTML = responseJSON.schedule.nextRotation;
             // Set Reminders
             var remindersHTML = "";
             for(reminder in responseJSON.reminders) {
                 reminder = responseJSON.reminders[reminder];
-                remindersHTML+= "<li>" + reminder + "</li>";
+                remindersHTML += "<li>";
+				remindersHTML += reminder;
+				remindersHTML += "</li>";
             }
-            document.getElementById('reminders-list').innerHTMl = remindersHTML;
+            document.getElementById('reminders-list').innerHTML = remindersHTML;
 		}
 	};
 	xhttp.open("GET", "/training/JSON/rotations.json", true);

@@ -1,15 +1,16 @@
 { "schedule": {
-	"nextRotation": "9/17",
+	"nextRotation": "10/1",
 	"days": [
-		{"name": "Monday", "reps": ["Jackson","Travis","Tyson"]},
-		{"name": "Tuesday", "reps": ["Nate","Wolf","Daniel"]},
-		{"name": "Wednesday", "reps": ["Slim","Devin","Shaun"]},
-		{"name": "Thursday", "reps": ["Holly","Josh","Kyler"]},
-		{"name": "Friday", "reps": ["Don","Jason R","John"]}
+		{"name": "Monday", "reps": ["Trevor","Josh", "Justin"]},
+		{"name": "Tuesday", "reps": ["Nate", "Jason", " Shaun"]},
+		{"name": "Wednesday", "reps": ["Don","John","Daniel"]},
+		{"name": "Thursday", "reps": ["Jackson", "Travis", "Kyler"]},
+		{"name": "Friday", "reps": ["Holly", "Tyson", "Jayden"]}
 		]
 	},
 	"reminders": [
 		"Answer the phone as quickly as possible",
+		"<span class='important'>If you have a conflict on your day (PTO, On Site, Meeting) you need to find someone to cover you</span>",
 		"Enter cases for the support mailbox",
 		"Get the cases entered",
 		"You do not own the ticket",

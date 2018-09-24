@@ -1,0 +1,26 @@
+{
+    "reps":[
+        {"name":"Ryan Dockstader","portStart":10000, "portEnd":10999 },
+		{"name":"Benson Price","portStart":11000, "portEnd":11999 },
+		{"name":"Bradey Merrill","portStart":12000, "portEnd":12999 },
+		{"name":"Dennis Holliday","portStart":13000, "portEnd":13999 },
+		{"name":"Jason Ladner","portStart":14000, "portEnd":14999 },
+		{"name":"Devin Dockstader","portStart":15000, "portEnd":15999 },
+		{"name":"Don Brouncheau","portStart":16000, "portEnd":16999 },
+		{"name":"Trevor Larsen","portStart":17000, "portEnd":17999 },
+		{"name":"Jason Rock","portStart":18000, "portEnd":18999 },
+		{"name":"Holly Ingersoll","portStart":19000, "portEnd":19999 },
+		{"name":"Shaun Crook","portStart":20000, "portEnd":20999 },
+		{"name":"Tyson Green","portStart":21000, "portEnd":21999 },
+		{"name":"Josh Gill","portStart":22000, "portEnd":22999 },
+		{"name":"Daniel Taylor","portStart":23000, "portEnd":23999 },
+		{"name":"Nate Spencer","portStart":24000, "portEnd":24999 },
+		{"name":"Travis Hatch","portStart":25000, "portEnd":25999 },
+		{"name":"John Ferguson","portStart":26000, "portEnd":26999 },
+		{"name":"Jackson Eaton","portStart":27000, "portEnd":27999 },
+		{"name":"Kyler Thomas","portStart":28000, "portEnd":28999 },
+		{"name":"Justin Kishbaugh","portStart":29000, "portEnd":29999 },
+		{"name":"Jayden Barker","portStart":30000, "portEnd":30999 }
+		
+	]
+}

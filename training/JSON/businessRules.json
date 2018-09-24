@@ -1,0 +1,5 @@
+{
+    "rules":[
+        {"name":"CaseInvPersResult", "exectypes":["before Update", "After Update"],"initialVersion":"5.0.4.1", "parameters":[{"name":"@NameID", "format":"something"}]}
+    ]
+}

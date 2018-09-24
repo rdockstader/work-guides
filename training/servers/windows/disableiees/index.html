@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Disable IE Enhanced Security</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Disable IE Enhanced Security</h1>
+				<p class="lead">How to disable Internet Exploreres Enahnced Security Features on Server 2008+</p>
+				<p class="lead">Ryan Dockstader | Sept 20, 2018</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<p>
+						Internet Explorer Enhanced Security is enabled on servers by default. It makes it so if a site isn't in a list of trusted sites
+						it won't allow you to browse to that site. (including sites from Microsoft, Google, localhost, etc.). While this can be a nice
+						feature, it can also be a touch annoying if it's not setup properly. In this guide, we'll show how to disable it. Here is the
+						error it will throw:
+					</p>
+					<img src="img/1_error_message.png" alt="Error message" class="img-fluid mx-auto d-block rounded">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<ol>
+						<li class="pb-5">
+							<p>Open Server Manager</p>
+							<img src="img/2_open_server_manager.png" alt="Open Server Manager" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Click Local Server on the Left Hand side</p>
+							<img src="img/3_local_server.png" alt="Open Local Server" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Under Properties, on the right hand side click the link next to IE Enahnced Security Configuration</p>
+							<img src="img/4_ie_es_conf.png" alt="IEES Config" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Check the box for off for Administartor and Users (or just administrators if you want to still restrict access to users)
+								then hit OK
+							</p>
+							<img src="img/5_turn_off.png" alt="Disable" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>
