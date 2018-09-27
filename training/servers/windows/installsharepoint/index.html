@@ -1,0 +1,259 @@
+We<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Install SharePoint on Windows 2016</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Install SharePoint on Windows 2016</h1>
+				<p class="lead">How to install SharePoint 2016 on Windows Server 2016 for JustWare Document Searching</p>
+				<p class="lead">Ryan Dockstader | Sept 24, 2018</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2>Install SharePoint Pre Requisits</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open the .iso</p>
+							<img src="img/prereqs/1_open_iso.png" alt="Open ISO" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Run splash.hta</p>
+							<img src="img/prereqs/2_splash.png" alt="Run splash" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Install software Prerequisits</p>
+							<img src="img/prereqs/3_install_prereqs.png" alt="Install prereqs" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Next on Page 1</p>
+							<img src="img/prereqs/4_page_1.png" alt="page 1" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Accept the Terms and click next on page 2</p>
+							<img src="img/prereqs/5_page_2.png" alt="page 2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Let the installer install the Pre-Reqs (This can take a while)</p>
+							<img src="img/prereqs/6_let_it_install.png" alt="wait" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Once the installer completes, select finish. (THIS WILL RESTART THE MACHINE)</p>
+							<img src="img/prereqs/7_finish.png" alt="finish" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Repeat until all Pre Reqs have completed Installing</p>
+						</li>
+						
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2>Installing Sharepoint 2016</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Open the .iso</p>
+							<img src="img/install/1_open_iso.png" alt="open iso" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Run splash.hta</p>
+							<img src="img/install/2_splash.png" alt="run splash" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Install SharePoint Server</p>
+							<img src="img/install/3_install_sharepoint.png" alt="install sharepoint" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Input a Licence Key and click Continue on page 1</p>
+							<img src="img/install/4_product_key.png" alt="input licence" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Accept the Terms and click Continue on page 2</p>
+							<img src="img/install/5_accept_terms.png" alt="accept terms" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the file locations (the default is fine) and select install</p>
+							<img src="img/install/6_install.png" alt="select file location" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2>Configuring Sharepoint 2016</h2>
+					<ol>
+						<li class="pb-5">
+							<p>Click Next on the first page</p>
+							<img src="img/configure/1_page_1.png" alt="page 1" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Yes on the Prompt</p>
+							<img src="img/configure/2_prompt.png" alt="prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If this a new setup, select Create a new server farm. Then click Next</p>
+							<img src="img/configure/3_page_2.png" alt="page 2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>fill in the database server and name information, then click next</p>
+							<p><strong>Note:</strong> the username and password must be a domain username and password</p>
+							<img src="img/configure/4_page_3.png" alt="page 3" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Enter in a passphrase, and click next</p>
+							<img src="img/configure/5_page_4.png" alt="page 4" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Single-Server Farm</p>
+							<img src="img/configure/6_single_server_farm.png" alt="page 5" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>You can select a port if you would like, or just let the installer pick for you. Leave the setting as NTLM, then hit next</p>
+							<img src="img/configure/7_port_number.png" alt="page 6" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Double check the settings, then click next</p>
+							<img src="img/configure/8_check_settings.png" alt="page 7" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Wait for the configuration to finish (this can take a while)</p>
+							<img src="img/configure/9_wait_for_config.png" alt="wait" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select Finish on the final page</p>
+							<img src="img/configure/10_finish.png" alt="finsih" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2>SharePoint Administration Site</h2>
+					<ol>
+						<li class="pb-5">
+							<p>When the Site first load, select No, I don't wish to partipate and click OK</p>
+							<img src="img/adminsite/1_no_on_prompt.png" alt="no on prompt" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Click the Start the Wizard button on the Welcome Page</p>
+							<img src="img/adminsite/2_start_the_wizard.png" alt="start wizard" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Choose use existing managed account, and verify that Search Service Application is selected. Then click Next</p>
+							<p><strong>Note:</strong> THE OTHER BOXES CAN BE UNCHECKED</p>
+							<img src="img/adminsite/3_page_2.png" alt="page 2" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Fill in the title and Description. You can set a custom URL if this a shared server (I.E. sharepoint and JustWare are running
+								on the same server. Select the Basic Search Center template under the Enterprise heading. Select OK
+							</p>
+							<img src="img/adminsite/4_site_setup.png" alt="site setup" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>This should install a site to search documents outside of JustWare. On the final page, select finish to complete the setup</p>
+							<img src="img/adminsite/5_finish.png" alt="finish" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<h2>Change the Port for Sharepoint</h2>
+					<p class="lead">This is only necessary if something else is running on port 80 (such as JustWare)</p>
+					<p><strong>Note:</strong> This may have to be done as the local machine administrator.</p>
+					<ol>
+						<li class="pb-5">
+							<p>Select Manage web applications</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the site that was created (it should be running on port 80)</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Click the Delete X on the top bar</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select yes on Delete Content databases and Delete IIS web sites. Then hit delete</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>After it finishes Deleting, return to the home page and select Create site collections</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select New Web Application</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>On the New Web Application screen, change the port number to something other then 80. Leave other settings as they are. Then hit OK</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>On the create Site collection screen, type a title and select Basic Search Center from the Enterprise tab.</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Scroll down and ad dyour user name as the primary site collection administrator then hit OK.</p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p></p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p></p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p></p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p></p>
+							<img src="" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>
