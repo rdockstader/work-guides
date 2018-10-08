@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Installing Intellij for eCourt</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Installing Intellij for eCourt</h1>
+				<p class="lead">How to Install, configure, and connect Intellij for eCourt</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-9">
+					<div class="row mb-3">
+						<div class="col-12">
+							<p><strong>Jump To:</strong></p>
+							<div class="list-group">
+								<a class="list-group-item" href="#jdk">Installing the JDK on Windows</a>
+								<a class="list-group-item" href="#groovy">Installing Groovy on Windows</a>
+								<a class="list-group-item" href="#intelij">Installing Intelij</a>
+								<a class="list-group-item" href="#first-time">First Time Setup</a>
+								<a class="list-group-item" href="#config-proj">Configuring Project Settings</a>
+								<a class="list-group-item" href="#map-drive">Mapping a network Drive</a>
+								<a class="list-group-item" href="#create-link">Creating a Groovy Project, and linking to the eCourt libraries</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="jdk">Installing the JDK on Windows</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										go to the Java <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK download page</a>
+									</p>
+									<img src="img/jdk/1_go_get_java.png" alt="java page" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select the latest Java SE
+									</p>
+									<img src="img/jdk/2_latest_se.png" alt="select latest" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Under Java SE Development Kit, select accept licence agreement
+									</p>
+									<img src="img/jdk/3_accept_licence.png" alt="accept licence" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										download the 64 bit windows .exe
+									</p>
+									<img src="img/jdk/4_windows_exe.png" alt="download" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Run the .exe that downloaded
+									</p>
+									<img src="img/jdk/5_run_exe.png" alt="run exe" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Next on the first page
+									</p>
+									<img src="img/jdk/6_next.png" alt="next" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Next on the second page
+									</p>
+									<img src="img/jdk/7_next_again.png" alt="next" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										The JDK should then install. When finished select Close. The JDK is now ready to go.
+									</p>
+									<img src="img/jdk/8_close.png" alt="done" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="groovy">Installing Groovy on Windows</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										Open the Apache Groovy <a href="http://groovy-lang.org/download.html">Download Page</a> and selec the download button
+									</p>
+									<img src="img/groovy/1_download_page.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										After the download is complete, extract the .zip
+									</p>
+									<img src="img/groovy/2_extract_zip.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										While the .zip is extracting, open C:\Program Files and create a new folder called Groovy
+									</p>
+									<img src="img/groovy/3_groovy_folder.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Once the .zip completes extracting, open the extraced folder and move the Groovy-VERSION folder into your C:\Program Files\Groovy directory
+									</p>
+									<img src="img/groovy/4_move_groovy.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Once this is completed, Groovy is available on your machine.</p>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="intelij">Installing Intelij</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										Go to the Intellij IDEA <a href="https://www.jetbrains.com/idea/download/#section=windows">download page</a>
+									</p>
+									<img src="img/installij/1_download_page.png" alt="download page" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Download the Community Edition
+									</p>
+									<img src="img/installij/2_comm_edition.png" alt="community edition" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Launch the installer .exe
+									</p>
+									<img src="img/installij/3_launch_exe.png" alt="launch exe" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select next on the first page
+									</p>
+									<img src="img/installij/4_next.png" alt="next" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select next on the second page
+									</p>
+									<img src="img/installij/5_next_again.png" alt="next" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										select the boxes for .java and .groovy, and 64-bit launcher. Then hit next
+									</p>
+									<img src="img/installij/6_file_associations.png" alt="file associations" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										select Install on the fourth page
+									</p>
+									<img src="img/installij/7_install.png" alt="install" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										After the installer is finished, check the box to run IntelliJ and hit finish
+									</p>
+									<img src="img/installij/8_finish.png" alt="finish" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="first-time">First Time Setup</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										Select Do Not import settings
+									</p>
+									<img src="img/first-install/1_dont_import.png" alt="don't import" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Scroll to the end and accept the privacy policy
+									</p>
+									<img src="img/first-install/2_accept.png" alt="accept" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Don't send
+									</p>
+									<img src="img/first-install/3_dont_send.png" alt="dont send" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select a Theme (Darcula is the most common choice), then hit next: Default plugins
+									</p>
+									<img src="img/first-install/4_darcula.png" alt="darcula" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Leave the defaults, and select Next: Featured plugins
+									</p>
+									<img src="img/first-install/5_defaults.png" alt="defaults" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Leave the defaults, and select Start using IntelliJ IDEA
+									</p>
+									<img src="img/first-install/6_leave_defaults.png" alt="defaults" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="config-proj">Configuring Project Settings</h2>
+							<ol>
+								
+								<li class="pb-5">
+									<p>
+										On the start page of IntelliJ, select configure -> Project Defaults -> Project Structure
+									</p>
+									<img src="img/config/1_open_ps.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										on the Project page under Project SDK select new
+									</p>
+									<img src="img/config/2_new_sdk.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select JDK from the dropdown
+									</p>
+									<img src="img/config/3_jdk.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Drill down into the instalation folder for the JDK (C:\Program Fiels\Java is the default location), select the JDK and click OK 
+									</p>
+									<p><strong>Note:</strong> The Project SDK should then update</p>
+									<img src="img/config/4_jdk_location.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Update the Project language level to the same version as your SDK (I.E. I have version 11 SDK, so I set my Project Language Level to 11)
+									</p>
+									<img src="img/config/5_language_level.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select OK
+									</p>
+									<img src="img/config/6_ok.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Back on the IntelliJ IDEA Start page, select Configure -> Settings
+									</p>
+									<img src="img/config/7_settings.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Expand Editor -> General -> Auto Import
+									</p>
+									<img src="img/config/9_auto_import.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Check Add unambiguous imports ont he fl and optimize imports on the fly
+									</p>
+									<img src="img/config/9_auto_import_2.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Appearance and make sure Show Line Numbers is checked
+									</p>
+									<img src="img/config/10_show_line_nums.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Code Folding and uncheck imports, one-line methods, closure, and generic constructor and method parameters (so no code is hiden. If you're experience in Java and InteliJ IDEA you may not need to do this step.)
+									</p>
+									<img src="img/config/11_code_folding.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Click OK, and you're ready to get your first project setup!
+									</p>
+									<img src="img/config/12_ok.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="map-drive">Mapping a network drive</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										Launch File Explorer
+									</p>
+									<img src="img/drivemap/1_file_explorer.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Browse to \\acdc\Tomcat Installs, and navigate to <br> \your initials\install name\webapps\sustain\WEB-INF <br>
+										Copy this path.
+									</p>
+									<img src="img/drivemap/2_find_web_files.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Right click on This PC and select Map Network Drive...
+									</p>
+									<img src="img/drivemap/3_map_drive.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select a drive letter that isn't used, and paste in the path copied in the previous step into the folder. Then Hit Finish
+									</p>
+									<img src="img/drivemap/4_connect_to_share.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Your network drive should be now mapped, and you're ready to create your project and link to the eCourt libraries.
+									</p>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2 id="create-link">Creating a Groovy Project, and linking to the eCourt libraries</h2>
+							<ol>
+								<li class="pb-5">
+									<p>
+										Open Intellij, and create a new project
+									</p>
+									<img src="img/project/1_create_project.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Check the box for Groovy
+									</p>
+									<img src="img/project/1_create_project.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								
+								<li class="pb-5">
+									<p>
+										On use library, select "create" and drill down to the groovy SDK that was just downloaded
+									</p>
+									<img src="img/project/3_create_groovy.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Click Next
+									</p>
+									<img src="img/project/4_next.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Give your Project a Title (I recommend calling it 'eCourt Groovy Scripts' or something to that effect). Then hit finish.
+									</p>
+									<img src="img/project/5_name_proj.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Open File -> Project Structure
+									</p>
+									<img src="img/project/6_project_structure.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select Libraries
+									</p>
+									<img src="img/project/7_libraries.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Press the + button, and select Java
+									</p>
+									<img src="img/project/8_java_lib.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Select the drive that was mapped in <a class="list-group-item" href="#map-drive">Mapping a network Drive</a>
+									</p>
+									<img src="img/project/9_mapped_drive.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Intellij Will then scan the directory and list a module. Click OK once the scan is done.
+									</p>
+									<img src="img/project/10_ok_prompt.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Once the Library is added, press th e+ and add the \lib folder
+									</p>
+									<img src="img/project/11_add_lib.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Press the + again, and this time add the classes folder
+									</p>
+									<img src="img/project/12_classes.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Once those are added, hit OK on the Project Structure dialog
+									</p>
+									<img src="img/project/13_ok_ps.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Wait for the Index to complete
+									</p>
+									<img src="img/project/14_indexing.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Once the index is complete, open Project explorer, right click on the root folder and create a new folder. Call this something like "RDTest Scripts" (where RDTest is the name of the environment you're running against.)
+									</p>
+									<img src="img/project/15_new_dir.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										Right click on the file, and create a new groovy script (you can name this after a business rule you're creating, just name it test script, or whatever you'd like).
+									</p>
+									<img src="img/project/16_new_script.png" alt="" class="img-fluid mx-auto d-block rounded mb-3">
+									<img src="img/project/17_new_script._namepng.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>
+										As Lincoln would say, you should now be ready to Groove!
+									</p>
+									<img src="img/project/18_ready_to_groove.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-3" id="ecourt-side-nav"></div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+		<script src="../../../script.js"></script>
+	</body>
+</html>

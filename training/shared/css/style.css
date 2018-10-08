@@ -13,6 +13,7 @@ a.btn {
 
 
 .important {
+	font-weight: bold;
 	color: red;
-	font-size: 120%;
+	font-size: 105%;
 }

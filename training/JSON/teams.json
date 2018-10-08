@@ -2,47 +2,48 @@
 		{"name":"Winning Team (1)", "members":[
 			{"role": "Account Manager", "name":"Jeremy Gledhill"},
 			{"role": "Config Specialist", "name":"Wolf Brevik"},
-			{"role": "Support Rep", "name": "Justin Kishbah"},
-			{"role": "Support Rep", "name": "Don Broncheau"}
+			{"role": "Support Rep (Primary JustWare)", "name": "Don Broncheau"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Justin Kishbah"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Tyson Jess"}
 		]},
 		{"name":"Judgement Day (2)", "members":[
 			{"role": "Account Manager", "name":"Tanner Davis"},
 			{"role": "Config Specialist", "name":"Brynt Nelson"},
 			{"role": "Config Specialist", "name":"Carson Cook"},
-			{"role": "Support Rep", "name": "Trevor Larson"},
-			{"role": "Support Rep", "name": "Jason Rock"}
+			{"role": "Support Rep (Primary JustWare)", "name": "Trevor Larson"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Jason Rock"}
 		]},
 		{"name":"Gongoozler (3)", "members":[
 			{"role": "Account Manager", "name":"Kade Hendricks"},
 			{"role": "Config Specialist", "name":"Preston Staker"},
-			{"role": "Support Rep", "name": "Holly Ingersoll"},
-			{"role": "Support Rep", "name": "???"}
+			{"role": "Support Rep (Primary JustWare)", "name": "Holly Ingersoll"}
 		]},
-		{"name":"Tony Tigers - We'reeeeee Greeeat! (4)", "members":[
+		{"name":"Tony Tigers - We'rrrre Greeeat! (4)", "members":[
 			{"role": "Account Manager", "name":"Tony Losee"},
 			{"role": "Config Specialist", "name":"Austin Hammer"},
-			{"role": "Support Rep", "name": "Shaun Crook"},
-			{"role": "Support Rep", "name": "Tyson Green"}
+			{"role": "Support Rep (Primary JustWare)", "name": "Shaun Crook"}
 		]},
 		{"name":"Benji (5)", "members":[
 			{"role": "Account Manager", "name":"Benji Skinner"},
 			{"role": "Config Specialist", "name":"Jordon Green"},
-			{"role": "Support Rep", "name": "Daniel Taylor"},
-			{"role": "Support Rep", "name": "Josh Gill"}
+			{"role": "Support Rep (Primary JustWare)", "name":"Tyke Cowdin"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Daniel Taylor"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Josh Gill"}
 		]},
 		{"name":"Six Shooters (6)", "members":[
 			{"role": "Account Manager", "name":"J.R. Ox"},
-			{"role": "Config Specialist", "name":"???"},
-			{"role": "Support Rep", "name": "Jayden Barker"},
-			{"role": "Support Rep", "name": "Nathan Spencer"},
-			{"role": "Support Rep", "name": "Travis Hatch"}
+			{"role": "Config Specialist", "name":"Patrick Redding"},
+			{"role": "Support Rep (Primary JustWare)", "name": "Nathan Spencer"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Jayden Barker"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Travis Hatch"}
 		]},
 		{"name":"Shawn (7)", "members":[
 			{"role": "Account Manager", "name":"Shawn Wolfley"},
 			{"role": "Config Specialist", "name":"???"},
-			{"role": "Support Rep", "name": "John Ferguson"},
-			{"role": "Support Rep", "name": "Jackson Eaton"},
-			{"role": "Support Rep", "name": "Kyler Thomas"}
+			{"role": "Support Rep (Primary JustWare)", "name": "Tyson Green"},
+			{"role": "Support Rep (Primary eCourt)", "name": "John Ferguson"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Jackson Eaton"},
+			{"role": "Support Rep (Primary eCourt)", "name": "Kyler Thomas"}
 		]},
 		{"name":"Escalated Support", "members":[
 			{"role": "Escalated Rep", "name":"Jason Ladner"},

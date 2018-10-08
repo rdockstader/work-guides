@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Parties and Case Assignments</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Parties and Case Assignments</h1>
+				<p class="lead">How Parties and Case Assignments relate to a case, and how to add them both</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row">
+				<div class="col-9">
+					<div class="row mb-3">
+						<div class="col-12">
+							<p>
+								Parties and case assignments are two seperate entities/tables in eCourt. Parties are people that directly
+								were involved iwth a case. Such as witnesses, victims, police officers, and defendants/clients. Case assignments
+								are people that are assigned to the case after the incident. Such as public defenders, private attornies, prosecutors,
+								judges, etc. Most environments keep these seperate with a parties and case assignments tab.
+							</p>
+							<h2>Adding a Party</h2>
+							<ol>
+								<li class="pb-5">
+									<p>On the primary case navigation find the drop down of parties/people</p>
+									<img src="img/parties-tab.png" alt="Parties Tab" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Select the add party option (this may also be seperated out into add defendant, add witness, etc.</p>
+									<img src="img/add-party.png" alt="Add Party" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>fill out the necessary information Required info is marked by : <span style="color:red;">*</span></p>
+									<img src="img/add-party-form.png" alt="Add Party Form" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Select one of the save buttons at the bottom of the form.</p>
+									<img src="img/save-button.png" alt="Save Button" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>The party should then be on the case</p>
+									<img src="img/party-on-case.png" alt="Party on Case" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+					<hr>
+					<div class="row mb-3">
+						<div class="col-12">
+							<h2>Adding a Case Assignment</h2>
+							<ol>
+								<li class="po-5">
+									<p>Open a case, and find the drop down for case/people</p>
+									<img src="img/parties-tab.png" alt="Parties Tab" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="po-5">
+									<p>Select the add case assignment option (this may be seperated into judge, attorney, etc.)</p>
+									<img src="img/add-ca.png" alt="Add Case Assignment" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="po-5">
+									<p>Fill out the necessary information. Required info is marked by : <span style="color:red;">*</span></p>
+									<img src="img/add-ca-form.png" alt="Add Case Assignment Form" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="po-5">
+									<p>Select one of the save buttons at the bottom of the form</p>
+									<img src="img/save-buttons-ca.png" alt="Save Buttons" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="po-5">
+									<p>The Assignment should then be on the case</p>
+									<img src="img/ca-on-case.png" alt="Case Assignment on Case" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-3" id="ecourt-side-nav"></div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+		<script src="../../../script.js"></script>
+	</body>
+</html>

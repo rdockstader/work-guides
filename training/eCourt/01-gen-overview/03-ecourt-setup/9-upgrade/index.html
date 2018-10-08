@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>eCourt Tomcat Upgrade</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="../../../../shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Upgrading eCourt on Tomcat on a Windows Server</h1>
+				<p class="lead">How to upgrade eCourt on a Windows Server</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-9">
+					<p class="important"><strong>Note:</strong> It is strongly recommended that a database backup is taken prior to any upgrade.</p>
+					<ol>
+						<li class="pb-5">
+							<p>
+								Open SQL Server Management Studio (SSMS)
+							</p>
+							<img src="img/01_open_ssms.png" alt="Open ssms" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Connect to the Server hosting the eCourt database
+							</p>
+							<img src="img/2_connect_sql.png" alt="connect to SQL" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Run the Check eCourt Version SQL query
+							</p>
+							<a href="../2-web-server/downloads/ecourtVersionQuery.sql"  class="btn btn-primary mb-3" download >Donwload Query</a>
+							<img src="img/3_run_query.png" alt="Run the SQL query" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Remote to the Web Server hosting eCourt.
+							</p>
+							<img src="img/4_remote.png" alt="remote to server" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Download the new .war file to the desktop of the server. If upgrading to the latest build, find the .war file that matches everything up to -b on the war file name. If upgrading to a more recent version, verify that version is greater then the version that shows in the query.
+							</p>
+							<p><strong>Note:</strong> If this is a local server, these can be found at \\jove\Product_Development\eCourt\WarFiles </p>
+							<img src="img/5_copy_war.png" alt="Copy war file" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open Services
+							</p>
+							<img src="img/6_Open_services.png" alt="Open Services" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								stop the tomcat service running the instance of eCourt you're upgrading. (this may take a while)
+							</p>
+							<img src="img/7_stop_the_service.png" alt="stop tomcat" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open file explorer and navigate to the bin folder in the Apache Tomcat Install directory for your instance. This can by found by right clicking on the service that was turned off, and selecting properties. 
+							</p>
+							<img src="img/8_navigate_to_path.png" alt="navigate to tomcat home" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Launch the w.exe file. (should be instancenamew.exe. So for an RDTest instance. It would be RDTestw.exe)
+							</p>
+							<img src="img/9_w_file.png" alt="launch w.exe" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the Java tab, and Scroll through the-Duser.home property. 
+							</p>
+							<img src="img/10_duser_home.png" alt="duser home" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Copy the path, open a new file explorer, navigate to the path, and hit cancel on the Apache Tomcat Properties window
+							</p>
+							<p>
+								<strong>Note:</strong> Leave the bin file explorer open, as we'll need to be in this directory later.
+							</p>
+							<img src="img/11_open_ecourt_home.png" alt="Open ecourt home" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Open the ecourt folder in the Duser home directory.
+							</p>
+							<img src="img/12_open_folder.png" alt="open ecourt folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Move the cache folders into an eCourtOldCache Folder. These should be anything other then a idm folder, an uploads folder, and anything with context or .properties in the file name
+							</p>
+							<img src="img/13_move_cache.png" alt="move cache to folder" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Cut and paste the eCourtOldCache folder one level up from the ecourt folder (this should be the same directory as listed in the Duser.home setting)
+							</p>
+							<p>
+								<strong>Note:</strong> be sure that you CUT and paste, not copy and paste. Cutting will be significantly faster.
+							</p>
+							<img src="img/14_move_folder.png" alt="move folder" class="img-fluid mx-auto d-block rounded mb-2">
+							<img src="img/15_move_cache.png" alt="cache moved" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Reopen the Apache Tomcat Home directory (the folder one level up from the bin folder we were working in earlier), and open the webapps folder
+							</p>
+							<img src="img/16_open_webapps.png" alt="open webapps" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								delete the sustain directory, and move the sustain.war file to the desktop if there is one.
+							</p>
+							<p>
+								<strong>Note:</strong> This may be labeled something else, but it should be the name after the first / in the url. I.E. if the url is appServer:8080/ecourt, then the folder/war file will be named ecourt.
+							</p>
+							<img src="img/17_sustain_files.png" alt="sustain files" class="img-fluid mx-auto d-block rounded mb-2">
+							<img src="img/18_file_moved.png" alt="after cleanup" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Move the new war file from the desktop to the webapps folder, and rename it the same as the old.war file
+							</p>
+							<img src="img/19_move_new_war.png" alt="move new war file" class="img-fluid mx-auto d-block rounded mb-2">
+							<img src="img/20_rename_new_war.png" alt="move new war file" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Restart the service. You should see the folder created in the webapps directory, and then a logs folder appear with a sustain.log file in it in the Duser home directory.
+							</p>
+							<img src="img/21_start_service.png" alt="start service" class="img-fluid mx-auto d-block rounded mb-3">
+							<img src="img/22_log_file.png" alt="log files" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Use your choice of software to monitor the log file and make sure the upgrade/startup processes don't fail. git bash is a good option, as well as notepad++ for this
+							</p>
+							<img src="img/23_tail_log.png" alt="git bash" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								If there are no errors for a few minutes, try to launch the app in a browser. You should get the login page, with the updated version.
+							</p>
+							<img src="img/24_new_app_version.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>
+								Attempt to login, open a case, a person, and run some searches. If everything was a success, the upgrade worked and you can then delete the eCourtOldCache that we created earlier, as well as the old .war file. After the files are cleaned up, your upgrade is complete.
+							</p>
+						</li>
+					</ol>
+				</div>
+				<div class="col-3" id="ecourt-side-nav"></div>
+			</div>
+		</section>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+		<script src="../../../script.js"></script>
+	</body>
+</html>

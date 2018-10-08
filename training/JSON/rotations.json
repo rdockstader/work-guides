@@ -1,21 +1,23 @@
 { "schedule": {
-	"nextRotation": "10/1",
+	"nextRotation": "10/29",
 	"days": [
-		{"name": "Monday", "reps": ["Trevor","Josh", "Justin"]},
-		{"name": "Tuesday", "reps": ["Nate", "Jason", " Shaun"]},
-		{"name": "Wednesday", "reps": ["Don","John","Daniel"]},
-		{"name": "Thursday", "reps": ["Jackson", "Travis", "Kyler"]},
-		{"name": "Friday", "reps": ["Holly", "Tyson", "Jayden"]}
+		{"name": "Monday", "reps": ["Everyone"]},
+		{"name": "Tuesday", "reps": ["Everyone" ]},
+		{"name": "Wednesday", "reps": ["Everyone"]},
+		{"name": "Thursday", "reps": ["Everyone"]},
+		{"name": "Friday", "reps": ["Everyone"]}
 		]
 	},
 	"reminders": [
-		"Answer the phone as quickly as possible",
-		"<span class='important'>If you have a conflict on your day (PTO, On Site, Meeting) you need to find someone to cover you</span>",
+		"<span class='important'>With so many people gone this week, everyone needs to chip in and help pick up the extra work.</span>",
+		"<span class='important'>This is a great opportunity for newer reps to jump in and learn the ropes and get comfortable answering phones.</span>",
+		"<span class='important'>Remember the more that everyone chips in, the better it is for everyone.<span>",
 		"Enter cases for the support mailbox",
 		"Get the cases entered",
 		"You do not own the ticket",
 		"Work on cases and personal to do list",
 		"Lunches should be coordinated (Not taken at the same time)",
-		"Beat Holly in call answer times and cases solved"]
+		"Hosted Upgrades happen the 2nd Wednesday of each month"
+	]
 
 }

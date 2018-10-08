@@ -1,0 +1,31 @@
+{	
+	"ecourt": [
+		{"name":"General Overview", "idName":"general-overview", "links": [
+				{"name": "eCourt User Navigation", "link": "/training/eCourt/01-gen-overview/01-general-ecourt-overview/1-ecourt-user-navigation/index.html"},
+				{"name": "Important Locations", "link": "/training/eCourt/01-gen-overview/01-general-ecourt-overview/2-important-locations/index.html"},
+				{"name": "How to Find Things in eCourt", "link": "/training/eCourt/01-gen-overview/01-general-ecourt-overview/3-how-to-find-things-in-ecourt/index.html"},
+				{"name": "Finding Version Information", "link": "/training/eCourt/01-gen-overview/01-general-ecourt-overview/4-finding-version-info/index.html"},
+				{"name": "Dashboard Configuration", "link": "/training/eCourt/01-gen-overview/01-general-ecourt-overview/5-dashboard-configuration/index.html"}
+			]
+		},
+		{"name":"Using eCourt", "idName":"using-ecourt", "links": [
+				{"name": "Entering a Case", "link": "/training/eCourt/01-gen-overview/02-using-ecourt/1-enter-case/index.html"},
+				{"name": "Parties and Case Assignments", "link": "/training/eCourt/01-gen-overview/02-using-ecourt/2-parties-case-assignment/index.html"},
+				{"name": "Adding an Event", "link": "/training/eCourt/01-gen-overview/02-using-ecourt/3-add-event/index.html"},
+				{"name": "Generating a Document", "link": "/training/eCourt/01-gen-overview/02-using-ecourt/4-generate-document/index.html"},
+				{"name": "Navigating through System Setup/System Admin", "link": "/training/eCourt/01-gen-overview/02-using-ecourt/5-navigate-system-menus/index.html"}
+			]
+		},
+		{"name":"Setting up an eCourt Instance", "idName":"setup-ecourt", "links": [
+				{"name": "Restoring/Creating a Database", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/1-database/index.html"},
+				{"name": "Installing eCourt on Tomcat with Windows Server", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/2-web-server/index.html"},
+				{"name": "ACDC Assigned Ports", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/8-installPorts/index.html"},
+				{"name": "Upgrading eCourt on Tomcat with Windows Server", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/9-upgrade/index.html"}
+			]
+		},
+		{"name":"Business Processes", "idName":"bis-proc", "links": [
+				{"name": "BR - Setting up Intellij For eCourt Business Rules", "link": "/training/eCourt/07-bis-proc/03-bis-rules/01-intelij/index.html"}
+			]
+		}
+	]
+}
