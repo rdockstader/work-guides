@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>CMSUser.Properties file</title>
+		<title>Reset Hosted Password</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 		<link rel="stylesheet" href="/training/shared/css/animate.css">
-		<link rel="stylesheet" href="../../../../shared/css/style.css">
+		<link rel="stylesheet" href="/training/shared/css/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -31,52 +31,52 @@
 			</div>
 		</nav>
 		<div class="jumbotron jumbotron-fluid">
-			<div class="container"><h1>CMSUser.properties file</h1>
-				<p class="lead">What is the CMSUser.properties file and what can it contain?</p>
+			<div class="container"><h1>Removing JustWare local AppData cache</h1>
+				<p class="lead">How to use the batch file to remove the local appdata cache</p>
 			</div>
 		</div>
 		<section class="container">
 			<div class="row mb-3">
-				<div class="col-9">
-					<h3>Where to Find the cmsuser.properties File (through eCourt)</h3>
+				<div class="col-12">
 					<ol>
 						<li class="pb-5">
-							<p>Expand System Admin, and select System Status</p>
-							<img src="img/throughecourt/1_system_status.png" alt="" class="img-fluid mx-auto d-block rounded">
+							<p>Download this batch file</p>
+							<a class="btn btn-primary" href="downloads/DeleteJustWare.bat" download>Download</a>
 						</li>
 						<li class="pb-5">
-							<p>Click cmsuser.properties, nad the file should download</p>
-							<img src="img/throughecourt/2_download_file.png" alt="" class="img-fluid mx-auto d-block rounded">
-						</li>
-					</ol>
-					<h3>Where to Find the cmsuser.properties File (On the server)</h3>
-					<ol>
-						<li class="pb-5">
-							<p>Navigate to the eCourt Home Directory (for more info on how to find this, refer to the <a href="../2-web-server/">web server</a> guide</p>
-							<img src="img/onserver/1_ecourt_home_dir.png" alt="" class="img-fluid mx-auto d-block rounded">
+							<p>Close all instances of JustWare that are open</p>
+							<img src="img/2_close_jw.png" alt="" class="img-fluid mx-auto d-block rounded">
 						</li>
 						<li class="pb-5">
-							<p>Open the cmsuser.properties in notepad++ or notepad.</p>
-							<img src="img/onserver/2_edit_with_notepad.png" alt="" class="img-fluid mx-auto d-block rounded">
+							<p>Run the batch file</p>
+							<img src="img/1_run_file.png" alt="" class="img-fluid mx-auto d-block rounded">
 						</li>
-					</ol>
-					<h3>cmsuser.properties File Documentation</h3>
-					<ol>
 						<li class="pb-5">
-							<p>Documentation for the cmsuser.properties files can be found in the <a href="https://journal.atlassian.net/wiki/spaces/DOC/pages/53149776/Administration+FAQ">Administration FAQ</a> on Confluence. Appendix A shows all the properties that can be put in the file.</p>
+							<p>If you get a prompt, select more info and then run anyway</p>
+							<!--<img src="" alt="" class="img-fluid mx-auto d-block rounded">-->
+						</li>
+						<li class="pb-5">
+							<p>Press Y on the do you want to delete apps/2.0 folder</p>
+							<img src="img/3_delete_apps.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If you don't have access to the files (I.E. you need admin access, or you currently have justware open) you'll get errors like this </p>
+							<img src="img/4_possible_error.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If you don't get any errors, hit Y on the next prompt</p>
+							<img src="img/5_delete_newdawntech.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>You should now be able to relaunch justware, and have it re-install.</p>
 						</li>
 					</ol>
 				</div>
-				<div class="col-3" id="ecourt-side-nav"></div>
 			</div>
 		</section>
-		<script
-		  src="https://code.jquery.com/jquery-3.3.1.min.js"
-		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		  crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 		<script src="/training/shared/js/script.js"></script>
-		<script src="../../../script.js"></script>
 	</body>
 </html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Reset Hosted Password</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel="stylesheet" href="/training/shared/css/animate.css">
+		<link rel="stylesheet" href="/training/shared/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<a class="navbar-brand" href="/">SATools</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/training/JustWare/">JustWare</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/training/eCourt/">eCourt</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/processes/" class="nav-link">Processes</a>
+					</li>
+					<li class="nav-item">
+						<a href="/training/servers/" class="nav-link">Servers</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container"><h1>Resetting Hosted Password</h1>
+				<p class="lead">How to reset a users password on our hosted servers</p>
+			</div>
+		</div>
+		<section class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<ol>
+						<li class="pb-5">
+							<p>Open File Explorer</p>
+							<img src="img/1_open_file_exp.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Type \\jove\support\Hosted\RDCMan 2.7 in the nav bar</p>
+							<img src="img/2_open_hosted_rdcman.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If you don't have Remote Desktop Connection Manager installed on your machine, run rdcman.msi and complete the installation with the default options</p>
+							<img src="img/3_run_Rdc_man.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p><strong>Follow these steps if you haven't installed the cert:</strong></p>
+							<ol>
+								<li class="pb-5">
+									<p>Open JTIRDCManCert pw.txt and copy the password to your clipboard</p>
+									<img src="img/4_1_open_pw.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Open JTIRDCManCert.pfx</p>
+									<img src="img/4_open_pfx.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Leave Current user selected, and hit next</p>
+									<img src="img/5_cur_user.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>The file name should be the file that you opened. Verify, and hit next</p>
+									<img src="img/6_next.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Input the password from your clipboard, leave the default options and hit next</p>
+									<img src="img/7_password.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Leave the default and hit next</p>
+									<img src="img/8_next.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+								<li class="pb-5">
+									<p>Hit finish on the last page</p>
+									<img src="img/9_finish.png" alt="" class="img-fluid mx-auto d-block rounded">
+								</li>
+							</ol>
+						</li>
+						<li class="pb-5">
+							<p>With RDCMan and the Certificate installed, launch Hosted Shared Saas (RDCMan 2.7).rdg</p>
+							<img src="img/10_launch_rdg.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Select the customer agency you're resetting the password for from the server list</p>
+							<img src="img/11_server_list.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>Once connected, seletec the key ring icon on the task bar</p>
+							<img src="img/12_key_ring.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>enter the Username and press the binoculars</p>
+							<img src="img/13_search_user.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>If there are multiple matches, you'll have to select the correct username from the list</p>
+							<img src="img/14_multiple_matches.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>With the user selected, verify that the name of the user is correct and type in a new password. (the G button will generate a random password)</p>
+							<img src="img/15_add_password.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>With the new password entered verify Force Password change at Login is selected, and hit change password. If the account is locked, you can also unlock the account. </p>
+							<img src="img/16_change_pw.png" alt="" class="img-fluid mx-auto d-block rounded">
+						</li>
+						<li class="pb-5">
+							<p>The password should now be changed. Sign Out of the computer, and notify the admin of the new password for the user. </p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		<script src="/training/shared/js/script.js"></script>
+	</body>
+</html>

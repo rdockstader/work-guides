@@ -19,6 +19,7 @@
 		{"name":"Setting up an eCourt Instance", "idName":"setup-ecourt", "links": [
 				{"name": "Restoring/Creating a Database", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/1-database/index.html"},
 				{"name": "Installing eCourt on Tomcat with Windows Server", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/2-web-server/index.html"},
+				{"name": "cmsuser.properties file", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/3-cmsuser/index.html"},
 				{"name": "ACDC Assigned Ports", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/8-installPorts/index.html"},
 				{"name": "Upgrading eCourt on Tomcat with Windows Server", "link": "/training/eCourt/01-gen-overview/03-ecourt-setup/9-upgrade/index.html"}
 			]
